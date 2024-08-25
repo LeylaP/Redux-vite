@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "./redux/counterSlicer";
+import UserList from "./UserList";
 
 function App() {
   // useSelector bize store>counter>slicer> initialState nin degerini döner
@@ -11,12 +12,13 @@ function App() {
 
   const dispatch = useDispatch();
 
-  // burada dectruction yöntemiyle initial state nin degerini değişkene atamadan direkt değerini çektik kolay kullanım amaçlı
+  // burada destruction yöntemiyle initial state nin degerini değişkene atamadan direkt değerini çektik kolay kullanım amaçlı
 
   console.log(value);
 
   return (
     <div>
+      <UserList />
       <div>
         <button onClick={() => dispatch(increment())}>Arttır</button>
         <div>{value}</div>
