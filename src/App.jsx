@@ -18,9 +18,9 @@ function App() {
   return (
     <div>
       <div>
-        <button onClick={() => dispatch(increment)}>Arttır</button>
+        <button onClick={() => dispatch(increment())}>Arttır</button>
         <div>{value}</div>
-        <button onClick={() => dispatch(decrement)}>Azalt</button>
+        <button onClick={() => dispatch(decrement())}>Azalt</button>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const initialState = {
 export const counterSlice = createSlice({
   name: "counter",
   initialState,
-  reducer: {
+  reducers: {
     increment: (state) => {
       state.value = state.value + 5;
     },
